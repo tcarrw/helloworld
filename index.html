@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Genesis — Seeding the Universe: Scenarios, Footprints, and Tests</title>
+  <title>Genesis &mdash; Seeding the Universe: Scenarios, Footprints, and Tests</title>
   <meta name="description" content="A v1.1 framework for cosmic seeding: decision tree (creator vs. natural vs. first), mathematical encoding options, observable footprints, falsifiable tests, and safety/governance if we are early." />
 
   <!-- Inline favicon -->
@@ -85,9 +85,9 @@
   <div class="wrap">
     <header>
       <div class="logo">Genesis</div>
-      <h1>Genesis — Seeding the Universe: Scenarios, Footprints, and Tests</h1>
-      <div class="subtitle">Creator vs. natural vs. first; how to look, how to act, and how to leave τ-robust messages</div>
-      <div class="meta">Author: Tristan White • v1.1 • Updated: Tue, Sep 2, 2025</div>
+      <h1>Genesis &mdash; Seeding the Universe: Scenarios, Footprints, and Tests</h1>
+      <div class="subtitle">Creator vs. natural vs. first; how to look, how to act, and how to leave &tau;-robust messages</div>
+      <div class="meta">Author: Tristan White &bull; v1.1 &bull; Updated: Tue, Sep 2, 2025</div>
 
       <nav aria-label="Contents">
         <ul>
@@ -96,15 +96,15 @@
           <li><a href="#tree">1. Decision Tree</a></li>
           <li><a href="#math">2. Mathematical Options &amp; Encoders</a></li>
           <li><a href="#footprints">3. Observable Footprints &amp; Tests</a></li>
-          <li><a href="#messages">4. τ-Robust Message Design for Baby Universes</a></li>
-          <li><a href="#first">5. If We’re First: Safety &amp; Governance</a></li>
+          <li><a href="#messages">4. &tau;-Robust Message Design for Baby Universes</a></li>
+          <li><a href="#first">5. If We&rsquo;re First: Safety &amp; Governance</a></li>
           <li><a href="#programs">6. Programs &amp; Pipelines (Pre-registrable)</a></li>
           <li><a href="#falsifiers">7. Falsifiers, Nulls, and Bounds</a></li>
           <li><a href="#references">References</a></li>
-          <li><a href="#appendix-a">Appendix A — CMB Code Search (Pre-Reg Sketch)</a></li>
-          <li><a href="#appendix-b">Appendix B — Bits in Constants (Feasibility)</a></li>
-          <li><a href="#appendix-c">Appendix C — Black-Hole Yield Sensitivity Map</a></li>
-          <li><a href="#appendix-d">Appendix D — Mathematical Definitions &amp; Identities</a></li>
+          <li><a href="#appendix-a">Appendix A &mdash; CMB Code Search (Pre-Reg Sketch)</a></li>
+          <li><a href="#appendix-b">Appendix B &mdash; Bits in Constants (Feasibility)</a></li>
+          <li><a href="#appendix-c">Appendix C &mdash; Black-Hole Yield Sensitivity Map</a></li>
+          <li><a href="#appendix-d">Appendix D &mdash; Mathematical Definitions &amp; Identities</a></li>
         </ul>
       </nav>
     </header>
@@ -112,14 +112,14 @@
     <main>
       <section id="abstract"><h2>Abstract</h2>
         <p class="abstract">
-          We outline four live scenarios for cosmic origins relative to “seeding”: (i) natural self-generation, (ii) civilizational genesis by earlier minds, (iii) simulation, and (iv) we are early/first.
+          We outline four live scenarios for cosmic origins relative to &ldquo;seeding&rdquo;: (i) natural self-generation, (ii) civilizational genesis by earlier minds, (iii) simulation, and (iv) we are early/first.
           Each admits <em>observable footprints</em> or <em>decision-relevant bounds</em>. We restore a detailed catalog of <strong>mathematical encoding options</strong>
-          (carriers, codes, statistics, capacity/robustness, and selection formalism), propose concrete, falsifiable programs, and argue for τ-robust messages if “first” remains plausible.
+          (carriers, codes, statistics, capacity/robustness, and selection formalism), propose concrete, falsifiable programs, and argue for &tau;-robust messages if &ldquo;first&rdquo; remains plausible.
         </p>
       </section>
 
       <section id="versions"><h2>Version Note</h2>
-        <p class="callout"><strong>v1.1 additions:</strong> Decision tree; <em>restored &amp; expanded</em> mathematical options; testable footprints table; τ-robust messaging; “we’re first” governance; three pre-registrable program sketches.</p>
+        <p class="callout"><strong>v1.1 additions:</strong> Decision tree; <em>restored &amp; expanded</em> mathematical options; testable footprints table; &tau;-robust messaging; &ldquo;we&rsquo;re first&rdquo; governance; three pre-registrable program sketches.</p>
       </section>
 
       <section id="tree"><h2>1. Decision Tree</h2>
@@ -162,13 +162,13 @@
           </tr>
           <tr>
             <td>CMB spectrum &amp; phases</td>
-            <td>Low-ℓ phase patterns; harmonic coefficients a<sub>ℓm</sub></td>
-            <td>Gaussian random field + systematics</td>
+            <td>Low-&ell; phase patterns; harmonic coefficients a<sub>&ell;m</sub></td>
+            <td>Gaussian random field &plus; systematics</td>
             <td>Global visibility / strong multiple-testing penalties</td>
           </tr>
           <tr>
             <td>Dimensionless constants</td>
-            <td>{α, m<sub>e</sub>/m<sub>p</sub>, Q, Gℏ/c³, …}</td>
+            <td>{&alpha;, m<sub>e</sub>/m<sub>p</sub>, Q, G&hbar;/c<sup>3</sup>, &hellip;}</td>
             <td>Measurement error; drift</td>
             <td>Simple &amp; universal / very low capacity if stability is tight</td>
           </tr>
@@ -180,7 +180,7 @@
           </tr>
           <tr>
             <td>Cosmic web morphology</td>
-            <td>Persistent homology; Euler characteristic χ</td>
+            <td>Persistent homology; Euler characteristic &chi;</td>
             <td>Nonlinear growth; bias</td>
             <td>Topological redundancy / late-time contamination</td>
           </tr>
@@ -189,27 +189,27 @@
         <h3>2.2 Codes &amp; algebra (how to structure bits)</h3>
         <ul>
           <li><strong>Short, prime-length sequences:</strong> Barker-like, Legendre, m-sequences (GF(2) LFSR) for low autocorrelation sidelobes.</li>
-          <li><strong>Error-correcting codes:</strong> Hamming, BCH, Reed–Solomon, extended Golay (24,12,8) for compact payloads with parity/checksums.</li>
-          <li><strong>Group-theoretic placements:</strong> encode on irreps of SO(3) via selected a<sub>ℓm</sub> with symmetry constraints.</li>
+          <li><strong>Error-correcting codes:</strong> Hamming, BCH, Reed&ndash;Solomon, extended Golay (24,12,8) for compact payloads with parity/checksums.</li>
+          <li><strong>Group-theoretic placements:</strong> encode on irreps of SO(3) via selected a<sub>&ell;m</sub> with symmetry constraints.</li>
           <li><strong>Balanced alphabets:</strong> ternary/biased codes to survive coarse graining; constant-weight codebooks for spectral carriers.</li>
         </ul>
 
         <h3>2.3 Statistics &amp; tests (how to detect/reject)</h3>
         <ul>
           <li><strong>Compression tests (AIC/MDL proxies):</strong> does a candidate code reduce description length vs. null?</li>
-          <li><strong>Algorithmic proxies:</strong> LZ76/CTW complexity on carrier strings (pre-registered mapping from map → string).</li>
+          <li><strong>Algorithmic proxies:</strong> LZ76/CTW complexity on carrier strings (pre-registered mapping from map &rarr; string).</li>
           <li><strong>Autocorrelation &amp; cross-correlation:</strong> max normalized deviation vs. Gaussian phase nulls.</li>
-          <li><strong>Multiple testing control:</strong> Bonferroni for small families; Benjamini–Hochberg (FDR) for broader scans.</li>
+          <li><strong>Multiple testing control:</strong> Bonferroni for small families; Benjamini&ndash;Hochberg (FDR) for broader scans.</li>
           <li><strong>Bayesian comparison:</strong> Bayes factors with explicit code priors and noise models.</li>
         </ul>
 
         <h3>2.4 Capacity &amp; robustness (how many bits survive)</h3>
         <div class="equation">C \approx \sum_{i} \log_{2}\!\left(1 + \frac{\tau_{\mathrm{enc},i}^{2}}{\sigma_{i}^{2}}\right) \quad \text{(orthogonal carriers i)}</div>
-        <p>Choose <em>τ<sub>enc,i</sub></em> (tolerated embedding amplitude) below detection thresholds that would break cosmology; model <em>σ<sub>i</sub></em> (noise) per carrier. Use repetition and interleaving to trade rate for reliability (Shannon).</p>
+        <p>Choose <em>&tau;<sub>enc,i</sub></em> (tolerated embedding amplitude) below detection thresholds that would break cosmology; model <em>&sigma;<sub>i</sub></em> (noise) per carrier. Use repetition and interleaving to trade rate for reliability (Shannon).</p>
 
         <h3>2.5 Selection formalism (if universes reproduce)</h3>
-        <div class="equation">F(\u03B8) = \lambda_{\mathrm{BH}}(\u03B8) \cdot H(\u03B8) \quad ; \quad \u03B8=\{\alpha, m_e/m_p, Q, G, ... \}</div>
-        <p>Reproductive fitness <em>F</em> combines black-hole yield <em>λ<sub>BH</sub></em> and habitability <em>H</em>. Ridge tests: is our observed <em>θ</em> near <em>∇F \u2248 0</em> with negative-definite Hessian?</p>
+        <div class="equation">F(&theta;) = \lambda_{\mathrm{BH}}(&theta;) \cdot H(&theta;) \quad ; \quad &theta;=\{&alpha;, m_e/m_p, Q, G, \ldots \}</div>
+        <p>Reproductive fitness <em>F</em> combines black-hole yield <em>&lambda;<sub>BH</sub></em> and habitability <em>H</em>. Ridge tests: is our observed <em>&theta;</em> near <em>&nabla;F &asymp; 0</em> with negative-definite Hessian?</p>
 
         <h3>2.6 Decoder pipelines (how a descendant would read)</h3>
         <ol>
@@ -228,9 +228,9 @@
         <table>
           <tr><th>Target</th><th>What to look for</th><th>Test sketch</th><th>Notes</th></tr>
           <tr>
-            <td>CMB low-ℓ morphology</td>
+            <td>CMB low-&ell; morphology</td>
             <td>Compressible, pre-specified short codes</td>
-            <td>Pre-register code family/statistic → apply to Planck/next CMB maps</td>
+            <td>Pre-register code family/statistic &rarr; apply to Planck/next CMB maps</td>
             <td>Avoid p-hacking: single statistic, correction for look-elsewhere</td>
           </tr>
           <tr>
@@ -253,29 +253,29 @@
           <li><strong>No engineered codes:</strong> null strengthens the natural baseline.</li>
         </ul>
 
-        <h3>3.3 “We’re first” circumstantial bounds</h3>
+        <h3>3.3 &ldquo;We&rsquo;re first&rdquo; circumstantial bounds</h3>
         <ul>
-          <li><strong>Galaxy-scale waste heat/technosignatures:</strong> aggregate upper limits → “no prior galaxy-scale engineers to redshift Z”.</li>
-          <li><strong>Parameter selection:</strong> if reproductive selection acts (BH + life-friendly chemistry), are our constants near local yield ridges?</li>
+          <li><strong>Galaxy-scale waste heat/technosignatures:</strong> aggregate upper limits &rarr; &ldquo;no prior galaxy-scale engineers to redshift Z&rdquo;.</li>
+          <li><strong>Parameter selection:</strong> if reproductive selection acts (BH &plus; life-friendly chemistry), are our constants near local yield ridges?</li>
         </ul>
       </section>
 
-      <section id="messages"><h2>4. τ-Robust Message Design for Baby Universes</h2>
+      <section id="messages"><h2>4. &tau;-Robust Message Design for Baby Universes</h2>
         <p>Messages should survive extreme coarse-graining and dissipation. Favor <em>dimensionless</em>, <em>topological</em>, and <em>spectral</em> encodings.</p>
         <h3>4.1 Principles</h3>
         <ul>
-          <li><strong>Dimensionless invariants:</strong> use ratios (e.g., <span class="equation" style="display:inline-block">r \u2261 \alpha/\alpha_G</span>) rather than units.</li>
+          <li><strong>Dimensionless invariants:</strong> use ratios (e.g., <span class="equation" style="display:inline-block">r &equiv; &alpha;/&alpha;<sub>G</sub></span>) rather than units.</li>
           <li><strong>Small alphabets:</strong> short prime-length sequences; error-correcting repetition.</li>
           <li><strong>Orthogonality:</strong> place the same payload in multiple independent carriers (constants, topology, spectrum).</li>
         </ul>
         <h3>4.2 Example payload (toy)</h3>
         <div class="equation">M = \{ \text{prime length } p,\ \text{Barker-like autocorrelation},\ \text{checksum} \}</div>
-        <p>Embed <em>M</em> as: (a) low-ℓ CMB phase pattern, (b) slight biases in a set of dimensionless ratios within error tolerance, (c) preferred compact topology signature.</p>
+        <p>Embed <em>M</em> as: (a) low-&ell; CMB phase pattern, (b) slight biases in a set of dimensionless ratios within error tolerance, (c) preferred compact topology signature.</p>
       </section>
 
-      <section id="first"><h2>5. If We’re First: Safety &amp; Governance</h2>
-        <div class="callout"><strong>Responsibility Box:</strong> If “first” remains plausible, adopt a <em>cosmic safety charter</em>:
-          publish open protocols; require multi-party review; set τ-budget risk caps; encode norms in any outbound message; ensure redundancy and revocability where feasible.</div>
+      <section id="first"><h2>5. If We&rsquo;re First: Safety &amp; Governance</h2>
+        <div class="callout"><strong>Responsibility Box:</strong> If &ldquo;first&rdquo; remains plausible, adopt a <em>cosmic safety charter</em>:
+          publish open protocols; require multi-party review; set &tau;-budget risk caps; encode norms in any outbound message; ensure redundancy and revocability where feasible.</div>
         <ul>
           <li><strong>Great Filter awareness:</strong> assume unknown failure modes; track leading indicators; use slow, staged deployments.</li>
           <li><strong>Open pre-registration:</strong> time-stamped plans for searches and encodings to minimize bias and coordinate globally.</li>
@@ -284,23 +284,23 @@
       </section>
 
       <section id="programs"><h2>6. Programs &amp; Pipelines (Pre-registrable)</h2>
-        <h3>6.1 CMB Code Search (low-ℓ)</h3>
+        <h3>6.1 CMB Code Search (low-&ell;)</h3>
         <ol>
-          <li>Specify a tiny code family <em>before</em> looking (e.g., prime-length Barker sequences up to N=47).</li>
+          <li>Specify a tiny code family <em>before</em> looking (e.g., prime-length Barker sequences up to N&nbsp;=&nbsp;47).</li>
           <li>Define one statistic (normalized autocorrelation deviation), one mask, one null ensemble.</li>
           <li>Freeze the analysis; run on Planck maps and a held-out replication pipeline.</li>
         </ol>
 
         <h3>6.2 Bits-in-Constants Feasibility</h3>
         <ol>
-          <li>Choose a set of dimensionless constants and current 1σ uncertainties.</li>
-          <li>Compute Shannon capacity under measurement noise + drift models.</li>
+          <li>Choose a set of dimensionless constants and current 1&sigma; uncertainties.</li>
+          <li>Compute Shannon capacity under measurement noise &plus; drift models.</li>
           <li>Report upper bound on encodable bits; negative results welcome.</li>
         </ol>
 
         <h3>6.3 Black-Hole Yield Sensitivity Map</h3>
         <ol>
-          <li>Vary a minimal parameter set (e.g., α, m<sub>e</sub>/m<sub>p</sub>, Q, G).</li>
+          <li>Vary a minimal parameter set (e.g., &alpha;, m<sub>e</sub>/m<sub>p</sub>, Q, G).</li>
           <li>Simulate stellar IMF, lifetimes, BH formation, heavy-element yield.</li>
           <li>Publish contours; test whether our point lies on a ridge/plateau.</li>
         </ol>
@@ -308,10 +308,10 @@
 
       <section id="falsifiers"><h2>7. Falsifiers, Nulls, and Bounds</h2>
         <ul>
-          <li><strong>Engineered encodings falsified:</strong> pre-reg code search returns consistent nulls across pipelines → disfavors civilizational-genesis messaging (not the whole branch).</li>
-          <li><strong>Messages-in-constants infeasible:</strong> capacity ≪ 1 bit under stability/noise → abandon that carrier; focus on topology/spectrum.</li>
-          <li><strong>Selection ridges absent:</strong> BH yield flat across neighborhood → weakens reproduction-based selection stories.</li>
-          <li><strong>Technosignature bounds:</strong> no galaxy-scale engineers to redshift Z → increases plausibility of “first/early.”</li>
+          <li><strong>Engineered encodings falsified:</strong> pre-reg code search returns consistent nulls across pipelines &rarr; disfavors civilizational-genesis messaging (not the whole branch).</li>
+          <li><strong>Messages-in-constants infeasible:</strong> capacity &ll; 1 bit under stability/noise &rarr; abandon that carrier; focus on topology/spectrum.</li>
+          <li><strong>Selection ridges absent:</strong> BH yield flat across neighborhood &rarr; weakens reproduction-based selection stories.</li>
+          <li><strong>Technosignature bounds:</strong> no galaxy-scale engineers to redshift Z &rarr; increases plausibility of &ldquo;first/early.&rdquo;</li>
         </ul>
       </section>
 
@@ -321,46 +321,46 @@
           <li>Method papers on pre-registration, MDL, and multiple-testing control in cosmology.</li>
           <li>Information theory (Shannon capacity; error-correcting codes) and algorithmic complexity references.</li>
           <li>Prior discussions of cosmic selection (black-hole reproduction) and anthropic constraints.</li>
-          <li>White, T. (2025). Unified Temporal–Energetic Geometry; τ-first messaging concepts.</li>
+          <li>White, T. (2025). Unified Temporal&mdash;Energetic Geometry; &tau;-first messaging concepts.</li>
         </ol>
       </section>
 
-      <section id="appendix-a"><h2>Appendix A — CMB Code Search (Pre-Reg Sketch)</h2>
-        <div class="equation">H_0: \text{CMB phases are Gaussian/random under the chosen mask}</div>
-        <div class="equation">H_1: \text{There exists a prime-length sequence } s \text{ with autocorrelation } R_s \text{ exceeding threshold } T</div>
+      <section id="appendix-a"><h2>Appendix A &mdash; CMB Code Search (Pre-Reg Sketch)</h2>
+        <div class="equation">H<sub>0</sub>: CMB phases are Gaussian/random under the chosen mask</div>
+        <div class="equation">H<sub>1</sub>: There exists a prime-length sequence <em>s</em> with autocorrelation R<sub>s</sub> exceeding threshold <em>T</em></div>
         <ul>
-          <li><strong>Code family:</strong> Barker-like sequences, prime lengths ≤ 47.</li>
+          <li><strong>Code family:</strong> Barker-like sequences, prime lengths &le; 47.</li>
           <li><strong>Statistic:</strong> max normalized autocorrelation deviation across code/rotation.</li>
           <li><strong>Null:</strong> 10,000 Gaussian phase randomizations with identical power spectrum.</li>
-          <li><strong>Decision:</strong> one-tailed p with Bonferroni correction for the code family size.</li>
+          <li><strong>Decision:</strong> one-tailed <em>p</em> with Bonferroni correction for the code family size.</li>
         </ul>
       </section>
 
-      <section id="appendix-b"><h2>Appendix B — Bits in Constants (Feasibility)</h2>
-        <p>Let <em>x</em> be a dimensionless constant with measured value <em>x̂</em> and uncertainty σ. The per-constant channel capacity (bits) under Gaussian noise with tolerance τ<sub>enc</sub> is approximately:</p>
-        <div class="equation">C_x \approx \log_{2}\!\left( 1 + \frac{\tau_{\text{enc}}^{2}}{\sigma^{2}} \right)</div>
-        <p>Aggregate across near-orthogonal constants; penalize for correlations and long-term drifts. If <em>Σ C_x</em> ≪ 1, constants are a poor carrier.</p>
+      <section id="appendix-b"><h2>Appendix B &mdash; Bits in Constants (Feasibility)</h2>
+        <p>Let <em>x</em> be a dimensionless constant with measured value <em>&#x005E;x</em> and uncertainty &sigma;. The per-constant channel capacity (bits) under Gaussian noise with tolerance &tau;<sub>enc</sub> is approximately:</p>
+        <div class="equation">C<sub>x</sub> \approx \log_{2}\!\left( 1 + \frac{\tau_{\text{enc}}^{2}}{\sigma^{2}} \right)</div>
+        <p>Aggregate across near-orthogonal constants; penalize for correlations and long-term drifts. If <em>&Sigma; C<sub>x</sub></em> &ll; 1, constants are a poor carrier.</p>
       </section>
 
-      <section id="appendix-c"><h2>Appendix C — Black-Hole Yield Sensitivity Map</h2>
-        <p>Define a minimal parameter vector <span class="equation" style="display:inline-block">\u03B8 = \{\alpha, m_e/m_p, Q, G \}</span>, then:</p>
-        <div class="equation">Y_{\mathrm{BH}}(\u03B8) = \int \mathrm{IMF}(\u03B8)\ \times\ P_{\mathrm{BH}\,|\,M,\u03B8}\ \times\ \mathrm{SFR}(\u03B8)\ dM\ dt</div>
-        <p>Publish contour plots of Y<sub>BH</sub>(θ) near observed θ. Ridges support selection-style reproduction stories; flatlands don’t.</p>
+      <section id="appendix-c"><h2>Appendix C &mdash; Black-Hole Yield Sensitivity Map</h2>
+        <p>Define a minimal parameter vector <span class="equation" style="display:inline-block">&theta; = \{&alpha;, m_e/m_p, Q, G \}</span>, then:</p>
+        <div class="equation">Y_{\mathrm{BH}}(&theta;) = \int \mathrm{IMF}(&theta;)\ \times\ P_{\mathrm{BH}\,|\,M,&theta;}\ \times\ \mathrm{SFR}(&theta;)\ dM\ dt</div>
+        <p>Publish contour plots of Y<sub>BH</sub>(&theta;). Ridges support selection-style reproduction stories; flatlands don&rsquo;t.</p>
       </section>
 
-      <section id="appendix-d"><h2>Appendix D — Mathematical Definitions &amp; Identities</h2>
+      <section id="appendix-d"><h2>Appendix D &mdash; Mathematical Definitions &amp; Identities</h2>
         <ul>
-          <li><strong>Spherical harmonics:</strong> a<sub>ℓm</sub> coefficients with <span class="equation" style="display:inline-block">C_\ell = \frac{1}{2\ell+1}\sum_m |a_{\ell m}|^2</span>.</li>
-          <li><strong>Matched circles (topology):</strong> statistic S maximizing phase correlations along paired great-circle arcs.</li>
-          <li><strong>Compression/MDL:</strong> ΔDL = DL(model) − DL(null); positive ΔDL favors the model if penalties are included.</li>
-          <li><strong>Algorithmic proxies:</strong> Lempel–Ziv complexity <em>K<sub>LZ</sub></em> as an upper-bound proxy for Kolmogorov complexity.</li>
-          <li><strong>Persistent homology:</strong> multiscale homology groups with barcodes; summary by Betti numbers β<sub>k</sub>(τ) and Euler characteristic χ.</li>
-          <li><strong>Reed–Solomon:</strong> code over GF(q) with parameters (n,k) correcting up to ⌊(n−k)/2⌋ symbol errors; useful for short robust payloads.</li>
+          <li><strong>Spherical harmonics:</strong> coefficients a<sub>&ell;m</sub> with <span class="equation" style="display:inline-block">C<sub>&ell;</sub> = \frac{1}{2&ell;+1}\sum_{m} \lvert a_{&ell;m} \rvert^{2}</span>.</li>
+          <li><strong>Matched circles (topology):</strong> statistic <em>S</em> maximizing phase correlations along paired great-circle arcs.</li>
+          <li><strong>Compression/MDL:</strong> &Delta;DL = DL(model) &minus; DL(null); positive &Delta;DL favors the model if penalties are included.</li>
+          <li><strong>Algorithmic proxies:</strong> Lempel&ndash;Ziv complexity <em>K<sub>LZ</sub></em> as an upper-bound proxy for Kolmogorov complexity.</li>
+          <li><strong>Persistent homology:</strong> multiscale homology groups with barcodes; summary by Betti numbers &beta;<sub>k</sub>(&tau;) and Euler characteristic &chi;.</li>
+          <li><strong>Reed&ndash;Solomon:</strong> code over GF(<em>q</em>) with parameters (<em>n,k</em>) correcting up to &lfloor;(n&minus;k)/2&rfloor; symbol errors; useful for short robust payloads.</li>
         </ul>
       </section>
     </main>
 
-    <footer>© <span id="y"></span> Tristan White • Creative Commons BY-NC-SA 4.0</footer>
+    <footer>&copy; <span id="y"></span> Tristan White &bull; Creative Commons BY-NC-SA 4.0</footer>
   </div>
   <script>
     // Keep the footer year current
