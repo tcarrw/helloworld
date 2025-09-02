@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Genesis τ — Seeding Baby Universes and One-Shot Messages</title>
-  <meta name="description" content="A τ-first exploration of cosmological engineering, causal limits, and universal message channels at creation." />
+  <title>Genesis — Seeding the Universe: Scenarios, Footprints, and Tests</title>
+  <meta name="description" content="A v1.1 framework for cosmic seeding: decision tree (creator vs. natural vs. first), observable footprints, falsifiable tests, and safety/governance if we are early." />
 
   <!-- Inline favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdjM2FlZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE2IiBmaWxsPSIjMGIwZjE5Ii8+PHRleHQgeD0iMTYiIHk9IjIxIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI2cpIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPlQ8L3RleHQ+PC9zdmc+" />
@@ -58,7 +58,7 @@
     h1{margin:0 0 8px;font-size:clamp(26px,4.5vw,38px);line-height:1.2}
     .subtitle{color:var(--muted);font-size:15px}
     .meta{margin-top:8px;color:var(--muted);font-size:14px}
-    nav{margin:26px auto;max-width:720px;text-align:left;background:var(--panel);
+    nav{margin:26px auto;max-width:760px;text-align:left;background:var(--panel);
         border:1px solid var(--rule);border-radius:12px;padding:16px 20px}
     nav a{color:var(--link);text-decoration:none}
     nav a:hover{text-decoration:underline}
@@ -85,178 +85,197 @@
   <div class="wrap">
     <header>
       <div class="logo">Genesis</div>
-      <h1>Genesis &tau; — Seeding Baby Universes and One-Shot Messages</h1>
-      <div class="subtitle">A &tau;-first exploration of cosmological engineering, causal limits, and universal beacons</div>
-      <div class="meta">Author: Tristan White • v1.0 • Updated: Mon, Sep 1, 2025, 11:11 PM EDT</div>
+      <h1>Genesis — Seeding the Universe: Scenarios, Footprints, and Tests</h1>
+      <div class="subtitle">Creator vs. natural vs. first; how to look, how to act, and how to leave τ-robust messages</div>
+      <div class="meta">Author: Tristan White • v1.1 • Updated: Tue, Sep 2, 2025</div>
+
       <nav aria-label="Contents">
         <ul>
           <li><a href="#abstract">Abstract</a></li>
-          <li><a href="#motivation">1. Motivation &amp; Scope</a></li>
-          <li><a href="#foundations">2. Foundations: Causality &amp; Baby Universes</a></li>
-          <li><a href="#principles">3. One-Shot Message Principles</a></li>
-          <li><a href="#channels">4. Universal Channels</a></li>
-          <li><a href="#benchmarks">5. Concrete Beacons &amp; Benchmarks</a></li>
-          <li><a href="#tau">6. &tau;-First Engineering Notes</a></li>
-          <li><a href="#detection">7. Detection Roadmap</a></li>
-          <li><a href="#falsifiers">8. Falsifiers &amp; Failure Modes</a></li>
-          <li><a href="#ethics">9. Ethical &amp; Design Considerations</a></li>
+          <li><a href="#versions">Version Note</a></li>
+          <li><a href="#tree">1. Decision Tree</a></li>
+          <li><a href="#footprints">2. Observable Footprints &amp; Tests</a></li>
+          <li><a href="#messages">3. τ-Robust Message Design for Baby Universes</a></li>
+          <li><a href="#first">4. If We’re First: Safety &amp; Governance</a></li>
+          <li><a href="#programs">5. Programs &amp; Pipelines (Pre-registrable)</a></li>
+          <li><a href="#falsifiers">6. Falsifiers, Nulls, and Bounds</a></li>
           <li><a href="#references">References</a></li>
-          <li><a href="#appendix-a">Appendix A — Messaging Templates</a></li>
-          <li><a href="#appendix-b">Appendix B — Test Protocols (Checklist)</a></li>
+          <li><a href="#appendix-a">Appendix A — CMB Code Search (Pre-Reg Sketch)</a></li>
+          <li><a href="#appendix-b">Appendix B — Bits in Constants (Feasibility)</a></li>
+          <li><a href="#appendix-c">Appendix C — Black-Hole Yield Sensitivity Map</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section id="abstract"><h2>Abstract</h2>
-        <p class="abstract">If it were possible to seed a “baby universe,” any outgoing communication must be encoded at creation and persist cosmologically. We propose a &tau;-first, operational taxonomy of <em>one-shot</em> message channels that are universal, robust to inflation and late-time astrophysics, and decodable by any advanced observers. We list concrete, quantified “beacons” (uniform CMB polarization rotation, spectral features in the primordial gravitational-wave background, topology tags) with detection benchmarks and falsifiers, and outline a &tau;-budgeting approach to ensure signals remain benign for structure formation.</p>
+        <p class="abstract">
+          We outline four live scenarios for cosmic origins relative to “seeding”: (i) natural self-generation, (ii) civilizational genesis by earlier minds, (iii) simulation, and (iv) we are early/first.
+          Each admits <em>observable footprints</em> or <em>decision-relevant bounds</em>. We propose concrete, falsifiable programs:
+          pre-registered low-ℓ CMB code search; feasibility of encoding bits in dimensionless constants; and a sensitivity map of black-hole yield under parameter variation.
+          If “first” remains plausible, we argue for τ-robust messages (dimensionless, topological) and a safety charter for cosmological engineering.
+        </p>
       </section>
 
-      <section id="motivation"><h2>1. Motivation &amp; Scope</h2>
-        <p>The seeding entity and the offspring cosmos are generically causally disconnected. Thus, “contact” reduces to leaving <em>global</em>, <em>dimensionless</em>, and <em>redundant</em> signatures that any civilization could recover with sky surveys or precision cosmology.</p>
+      <section id="versions"><h2>Version Note</h2>
+        <p class="callout"><strong>v1.1 additions:</strong> Decision tree; testable footprints table; τ-robust messaging design; “we’re first” governance box; three pre-registrable program sketches.</p>
       </section>
 
-      <section id="foundations"><h2>2. Foundations: Causality &amp; Baby Universes</h2>
-        <p>Pinch-off geometries and black-hole interiors typically sever two-way links. We therefore focus on initial-condition encodings that propagate to late times with minimal degradation.</p>
-        <div class="equation">Design target: global, frame-independent, horizon-scale observables &rarr; universal accessibility</div>
+      <section id="tree"><h2>1. Decision Tree</h2>
+        <table>
+          <tr><th>Branch</th><th>Claim</th><th>Implications</th></tr>
+          <tr>
+            <td>Natural</td>
+            <td>Universes arise lawfully (inflation/bounce/black-hole budding)</td>
+            <td>Seeding is scientific extension; look for baseline relics (no engineered signals)</td>
+          </tr>
+          <tr>
+            <td>Civilizational genesis</td>
+            <td>Earlier minds seeded ours</td>
+            <td>Search for engineered encodings in early conditions/constants/topology</td>
+          </tr>
+          <tr>
+            <td>Simulation</td>
+            <td>Universe computed by an external agent</td>
+            <td>Proceed with standard tests; predictions &amp; falsifiers still carry inside the sim</td>
+          </tr>
+          <tr>
+            <td>We are first/early</td>
+            <td>No prior seeders in our past light cone</td>
+            <td>Ethical stewardship; publish open protocols; multiple redundant messages</td>
+          </tr>
+        </table>
       </section>
 
-      <section id="principles"><h2>3. One-Shot Message Principles</h2>
+      <section id="footprints"><h2>2. Observable Footprints &amp; Tests</h2>
+        <h3>2.1 Engineered encodings (civilizational genesis)</h3>
+        <table>
+          <tr><th>Target</th><th>What to look for</th><th>Test sketch</th><th>Notes</th></tr>
+          <tr>
+            <td>CMB low-ℓ morphology</td>
+            <td>Compressible, pre-specified short codes</td>
+            <td>Pre-register code family/statistic → apply to Planck/next CMB maps</td>
+            <td>Avoid p-hacking: single statistic, correction for look-elsewhere</td>
+          </tr>
+          <tr>
+            <td>Dimensionless constants</td>
+            <td>Encodable bits in measured values</td>
+            <td>Bound how many stable bits survive lab error &amp; cosmic variance</td>
+            <td>Prefer ratios; publish negative result if infeasible</td>
+          </tr>
+          <tr>
+            <td>Topology</td>
+            <td>Preferred compactifications (circles/matches)</td>
+            <td>Hunt matched circles; constrain specific topologies</td>
+            <td>Conservative priors; replication across pipelines</td>
+          </tr>
+        </table>
+
+        <h3>2.2 Natural baselines</h3>
         <ul>
-          <li><strong>Universality:</strong> everyone sees it (CMB, primordial GWs, topology).</li>
-          <li><strong>Survivability:</strong> resistant to inflationary smoothing and late-time processing.</li>
-          <li><strong>Decodability:</strong> compressible into simple ratios/angles; low algorithmic complexity.</li>
-          <li><strong>Benign:</strong> does not spoil BBN, CMB, or structure formation.</li>
-          <li><strong>Redundancy:</strong> the same number appears via two independent mechanisms.</li>
+          <li><strong>Bubble collisions/bounce relics:</strong> survey very-large-scale anomalies with pre-specified templates.</li>
+          <li><strong>No engineered codes:</strong> null strengthens the natural baseline.</li>
+        </ul>
+
+        <h3>2.3 “We’re first” circumstantial bounds</h3>
+        <ul>
+          <li><strong>Galaxy-scale waste heat/technosignatures:</strong> aggregate upper limits → “no prior galaxy-scale engineers to redshift Z”.</li>
+          <li><strong>Parameter selection:</strong> if reproductive selection acts (BH + life-friendly chemistry), are our constants near local yield ridges?</li>
         </ul>
       </section>
 
-      <section id="channels"><h2>4. Universal Channels</h2>
-        <h3>4.1 CMB polarization rotation (cosmic birefringence)</h3>
-        <p>Encode a frequency-independent angle &theta; that mixes E/B modes.</p>
-        <div class="equation">Signature: nonzero TB/EB with uniform sign &rarr; rotation angle &theta;</div>
-
-        <h3>4.2 Primordial gravitational-wave background (PGWB) beacons</h3>
-        <p>Generate two–three narrow peaks with special <em>ratios</em>, robust across detectors.</p>
-        <div class="equation">Signature: &Omega;<sub>GW</sub>(f) has peaks at f<sub>1</sub>, f<sub>2</sub>, ... with f<sub>2</sub>/f<sub>1</sub> = &phi; (golden ratio), etc.</div>
-
-        <h3>4.3 Spatial topology tag</h3>
-        <p>Choose a multiply connected fundamental domain with integer side-length ratios (e.g., 3:4:5) just inside the observable radius.</p>
-        <div class="equation">Signature: matched circles in the CMB + repeating LSS patterns</div>
-
-        <h3>4.4 Parity-odd imprints</h3>
-        <p>Chiral PGWB or scale-invariant TB/EB beyond uniform rotation.</p>
-
-        <h3>4.5 Mild isocurvature markers</h3>
-        <p>Small, coherent isocurvature fraction at two k-modes with a simple ratio.</p>
-      </section>
-
-      <section id="benchmarks"><h2>5. Concrete Beacons &amp; Benchmarks</h2>
-        <div class="callout"><strong>Design note:</strong> choose <em>dimensionless</em> encodings (angles, ratios) and keep amplitudes below conservative cosmological bounds.</div>
-
-        <h3>5.1 Uniform CMB rotation</h3>
-        <div class="equation">Target: &theta; = 0.0314159 rad (≈ 1.80&deg;) &rarr; recoverable from TB/EB</div>
-        <p>Redundancy: also encode &theta;/&pi; in a second channel (e.g., chiral PGWB sign).</p>
-
-        <h3>5.2 Two-peak PGWB “golden beacon”</h3>
-        <div class="equation">f<sub>2</sub>/f<sub>1</sub> = &phi; = (1 + &radic;5)/2 &approx; 1.61803</div>
-        <p>Keep peak amplitudes modest; prioritize <em>ratios</em> over absolutes.</p>
-
-        <h3>5.3 Topology ID</h3>
-        <div class="equation">Fundamental domain: side ratios 3:4:5; curvature tuned to produce matched circles at degree scales</div>
-
-        <h3>5.4 “Lockstep” checksum</h3>
-        <div class="equation">&delta;&lambda;<sub>C</sub>/&lambda;<sub>C</sub> = &delta;t<sub>C</sub>/t<sub>C</sub> = &minus;&delta;&omega;<sub>c</sub>/&omega;<sub>c</sub></div>
-        <p>Include a tiny, coherent modulation obeying this relation so multiple experiments confirm the same bit.</p>
-      </section>
-
-      <section id="tau"><h2>6. &tau;-First Engineering Notes</h2>
-        <p>Let &tau; &equiv; E/c<sup>3</sup> &equiv; m/c. Treat message generation as &tau;-budgeted excitations:</p>
-        <div class="equation">E<sub>msg</sub> &rarr; &tau;<sub>msg</sub> = E<sub>msg</sub>/c<sup>3</sup></div>
-        <p>Constraints: keep total &tau;<sub>msg</sub> small enough to avoid excess radiation or curvature while preserving detectability.</p>
-      </section>
-
-      <section id="detection"><h2>7. Detection Roadmap</h2>
+      <section id="messages"><h2>3. τ-Robust Message Design for Baby Universes</h2>
+        <p>Messages should survive extreme coarse-graining and dissipation. Favor <em>dimensionless</em>, <em>topological</em>, and <em>spectral</em> encodings.</p>
+        <h3>3.1 Principles</h3>
         <ul>
-          <li><strong>CMB:</strong> TB/EB estimators for uniform rotation; topology matched-circle searches.</li>
-          <li><strong>PGWB:</strong> cross-band spectral peak hunting (PTAs, space interferometers, ground-based).</li>
-          <li><strong>LSS:</strong> wiggle-finding in P(k); topology repeats.</li>
-          <li><strong>Redundancy:</strong> same number via two channels to suppress systematics.</li>
+          <li><strong>Dimensionless invariants:</strong> use ratios (e.g., <span class="equation" style="display:inline-block">r \u2261 \alpha/\alpha_G</span>) rather than units.</li>
+          <li><strong>Small alphabets:</strong> short prime-length sequences; error-correcting repetition.</li>
+          <li><strong>Orthogonality:</strong> place the same payload in multiple independent carriers (constants, topology, spectrum).</li>
+        </ul>
+        <h3>3.2 Example payload (toy)</h3>
+        <div class="equation">M = \{ \text{prime length } p,\ \text{Barker-like autocorrelation},\ \text{checksum} \}</div>
+        <p>Embed <em>M</em> as: (a) low-ℓ CMB phase pattern, (b) slight biases in a set of dimensionless ratios within error tolerance, (c) preferred compact topology signature.</p>
+      </section>
+
+      <section id="first"><h2>4. If We’re First: Safety &amp; Governance</h2>
+        <div class="callout"><strong>Responsibility Box:</strong> If “first” remains plausible, adopt a <em>cosmic safety charter</em>:
+          publish open protocols; require multi-party review; set τ-budget risk caps; encode norms in any outbound message; ensure redundancy and revocability where feasible.</div>
+        <ul>
+          <li><strong>Great Filter awareness:</strong> assume unknown failure modes; track leading indicators; use slow, staged deployments.</li>
+          <li><strong>Open pre-registration:</strong> time-stamped plans for searches and encodings to minimize bias and coordinate globally.</li>
+          <li><strong>Plural encoders:</strong> avoid single-point failure of culture/values; diversify payload custodians.</li>
         </ul>
       </section>
 
-      <section id="falsifiers"><h2>8. Falsifiers &amp; Failure Modes</h2>
-        <ul>
-          <li>Null TB/EB consistent with calibration &rarr; rules out uniform rotation beacon.</li>
-          <li>No stable PGWB peak ratios across bands &rarr; rules out spectral encoding.</li>
-          <li>Matched-circle limits push topology scale beyond horizon &rarr; topology tag excluded.</li>
-          <li>Any signal that breaks BBN/CMB/structure limits &rarr; not a viable beacon.</li>
-        </ul>
+      <section id="programs"><h2>5. Programs &amp; Pipelines (Pre-registrable)</h2>
+        <h3>5.1 CMB Code Search (low-ℓ)</h3>
+        <ol>
+          <li>Specify a tiny code family <em>before</em> looking (e.g., prime-length Barker sequences up to N=47).</li>
+          <li>Define one statistic (normalized autocorrelation deviation), one mask, one null ensemble.</li>
+          <li>Freeze the analysis; run on Planck maps and a held-out replication pipeline.</li>
+        </ol>
+
+        <h3>5.2 Bits-in-Constants Feasibility</h3>
+        <ol>
+          <li>Choose a set of dimensionless constants and current 1σ uncertainties.</li>
+          <li>Compute Shannon capacity under measurement noise + drift models.</li>
+          <li>Report upper bound on encodable bits; negative results welcome.</li>
+        </ol>
+
+        <h3>5.3 Black-Hole Yield Sensitivity Map</h3>
+        <ol>
+          <li>Vary a minimal parameter set (e.g., α, m<sub>e</sub>/m<sub>p</sub>, Q, G).</li>
+          <li>Simulate stellar IMF, lifetimes, BH formation, heavy-element yield.</li>
+          <li>Publish contours; test whether our point lies on a ridge/plateau.</li>
+        </ol>
       </section>
 
-      <section id="ethics"><h2>9. Ethical &amp; Design Considerations</h2>
+      <section id="falsifiers"><h2>6. Falsifiers, Nulls, and Bounds</h2>
         <ul>
-          <li><strong>Non-maleficence:</strong> do not degrade structure formation or habitability.</li>
-          <li><strong>Universality:</strong> avoid anthropic encodings; prefer mathematical constants and simple ratios.</li>
-          <li><strong>Verification:</strong> design for multi-probe confirmation within a few decades of detectors.</li>
+          <li><strong>Engineered encodings falsified:</strong> pre-reg code search returns consistent nulls across pipelines → disfavors civilizational-genesis messaging (not the whole branch).</li>
+          <li><strong>Messages-in-constants infeasible:</strong> capacity ≪ 1 bit under stability/noise → abandon that carrier; focus on topology/spectrum.</li>
+          <li><strong>Selection ridges absent:</strong> BH yield flat across neighborhood → weakens reproduction-based selection stories.</li>
+          <li><strong>Technosignature bounds:</strong> no galaxy-scale engineers to redshift Z → increases plausibility of “first/early.”</li>
         </ul>
       </section>
 
       <section id="references"><h2>References</h2>
         <ol>
-          <li>Foundational ideas on inflation, bubble universes, and topology searches.</li>
-          <li>Method papers on CMB polarization rotation and TB/EB estimators.</li>
-          <li>Reviews on stochastic gravitational-wave backgrounds across frequency bands.</li>
-          <li>Prior τ-first work: White, T. (2025). Unified Temporal–Energetic Geometry (&tau; framework).</li>
+          <li>Standard cosmology texts on inflation, CMB, topology searches.</li>
+          <li>Method papers on pre-registration and multiple-testing control in cosmology.</li>
+          <li>Prior discussions of cosmic selection (black-hole reproduction) and anthropic constraints.</li>
+          <li>White, T. (2025). Unified Temporal–Energetic Geometry; τ-first messaging concepts.</li>
         </ol>
       </section>
 
-      <section id="appendix-a"><h2>Appendix A — Messaging Templates</h2>
-        <h3>A.1 Angle + Ratio (redundant encoding)</h3>
-        <div class="equation">&theta; = 0.0314159 rad; &nbsp; f<sub>2</sub>/f<sub>1</sub> = &phi;</div>
-        <p>Detect via CMB TB/EB and PGWB peak ratios. Publish both with uncertainties as a self-identifying pair.</p>
-
-        <h3>A.2 Topology + Wiggle</h3>
-        <div class="equation">Domain 3:4:5; &nbsp; P(k) has a small log-periodic oscillation with two incommensurate frequencies</div>
-
-        <h3>A.3 Parity + Checksum</h3>
-        <div class="equation">Chiral PGWB sign fixed; &nbsp; lockstep relation across Compton/cyclotron/clock channels</div>
+      <section id="appendix-a"><h2>Appendix A — CMB Code Search (Pre-Reg Sketch)</h2>
+        <div class="equation">H_0: \text{CMB phases are Gaussian/random under the chosen mask}</div>
+        <div class="equation">H_1: \text{There exists a prime-length sequence } s \text{ with autocorrelation } R_s \text{ exceeding threshold } T</div>
+        <ul>
+          <li><strong>Code family:</strong> Barker-like sequences, prime lengths ≤ 47.</li>
+          <li><strong>Statistic:</strong> max normalized autocorrelation deviation across code/rotation.</li>
+          <li><strong>Null:</strong> 10,000 Gaussian phase randomizations with identical power spectrum.</li>
+          <li><strong>Decision:</strong> one-tailed p with Bonferroni correction for the code family size.</li>
+        </ul>
       </section>
 
-      <section id="appendix-b"><h2>Appendix B — Test Protocols (Checklist)</h2>
-        <table>
-          <tr><th>Channel</th><th>Observable</th><th>Procedure</th><th>Decision</th></tr>
-          <tr>
-            <td>CMB rotation</td>
-            <td>TB/EB &rarr; &theta;</td>
-            <td>Joint analysis of temperature + E/B; calibration null tests</td>
-            <td>Detect if &theta; &ne; 0 across instruments</td>
-          </tr>
-          <tr>
-            <td>PGWB peaks</td>
-            <td>&Omega;<sub>GW</sub>(f) peaks</td>
-            <td>Cross-band search; require stable ratios</td>
-            <td>Detect if f<sub>2</sub>/f<sub>1</sub> constant across bands</td>
-          </tr>
-          <tr>
-            <td>Topology</td>
-            <td>Matched circles</td>
-            <td>Full-sky CMB map; circle-matching algorithm</td>
-            <td>Detect if consistent pairs found above false-match rate</td>
-          </tr>
-          <tr>
-            <td>Parity/chirality</td>
-            <td>Sign-stable TB/EB, chiral PGWB</td>
-            <td>Multi-detector parity tests</td>
-            <td>Detect if odd correlations persist after systematics</td>
-          </tr>
-        </table>
+      <section id="appendix-b"><h2>Appendix B — Bits in Constants (Feasibility)</h2>
+        <p>Let <em>x</em> be a dimensionless constant with measured value <em>x̂</em> and uncertainty σ. The per-constant channel capacity (bits) under Gaussian noise with tolerance τ<sub>enc</sub> is roughly:</p>
+        <div class="equation">C \approx \log_2 \!\left( 1 + \frac{\tau_{\text{enc}}^2}{\sigma^2} \right)</div>
+        <p>Aggregate across orthogonal constants; penalize for correlations and long-term drifts. If <em>C</em> ≪ 1 after penalties, this carrier is not viable.</p>
+      </section>
+
+      <section id="appendix-c"><h2>Appendix C — Black-Hole Yield Sensitivity Map</h2>
+        <p>Define a minimal parameter vector <span class="equation" style="display:inline-block">\u03B8 = \{\alpha, m_e/m_p, Q, G \}</span>.</p>
+        <div class="equation">Y_{\mathrm{BH}}(\u03B8) = \int \mathrm{IMF}(\u03B8)\ \times\ P_{\mathrm{BH}\,|\,M,\u03B8}\ \times\ \mathrm{SFR}(\u03B8)\ dM\ dt</div>
+        <p>Publish contour plots of Y<sub>BH</sub>(θ) near observed θ. Ridges support selection-style reproduction stories; flatlands don’t.</p>
       </section>
     </main>
 
     <footer>© <span id="y"></span> Tristan White • Creative Commons BY-NC-SA 4.0</footer>
   </div>
   <script>
+    // Keep the footer year current
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 </body>
