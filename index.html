@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Genesis τ — Seeding Baby Universes and One-Shot Messages</title>
+  <meta name="description" content="A τ-first exploration of cosmological engineering, causal limits, and universal message channels at creation." />
+
+  <!-- Inline favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdjM2FlZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE2IiBmaWxsPSIjMGIwZjE5Ii8+PHRleHQgeD0iMTYiIHk9IjIxIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI2cpIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPlQ8L3RleHQ+PC9zdmc+" />
+
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --panel:#121827;
+      --ink:#e6e8ee;
+      --muted:#a3acc2;
+      --accent:#7c3aed;
+      --accent-2:#f59e0b;
+      --rule:#2a3348;
+      --code:#0e1422;
+      --link:#9aa8ff;
+      --maxw:980px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#ffffff;
+        --panel:#f6f7fb;
+        --ink:#0f1222;
+        --muted:#4a546e;
+        --rule:#e4e7f0;
+        --code:#f1f3f9;
+        --link:#2b59ff;
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 800px at 20% -10%, rgba(124,58,237,.08), transparent 45%),
+        radial-gradient(1000px 700px at 110% 10%, rgba(245,158,11,.08), transparent 40%),
+        var(--bg);
+      color:var(--ink);
+      font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:48px 20px 96px}
+    header{text-align:center;margin-bottom:32px}
+    .logo{
+      font-size:clamp(36px,6vw,64px);
+      font-weight:800;
+      letter-spacing:2px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      display:inline-block;
+      margin-bottom:12px;
+    }
+    h1{margin:0 0 8px;font-size:clamp(26px,4.5vw,38px);line-height:1.2}
+    .subtitle{color:var(--muted);font-size:15px}
+    .meta{margin-top:8px;color:var(--muted);font-size:14px}
+    nav{margin:26px auto;max-width:720px;text-align:left;background:var(--panel);
+        border:1px solid var(--rule);border-radius:12px;padding:16px 20px}
+    nav a{color:var(--link);text-decoration:none}
+    nav a:hover{text-decoration:underline}
+    nav ul{margin:0;padding-left:18px}
+    section{background:rgba(255,255,255,.02);border:1px solid var(--rule);
+        border-radius:16px;padding:24px 20px;margin:18px 0}
+    h2{margin:0 0 8px;font-size:clamp(20px,3.5vw,26px)}
+    h3{margin:16px 0 8px;font-size:18px}
+    p{margin:10px 0 0}
+    .equation{display:block;margin:12px 0;padding:12px 14px;background:var(--code);
+        border:1px solid var(--rule);border-radius:10px;
+        font-family:ui-monospace,Menlo,Consolas,"Courier New",monospace;overflow:auto;white-space:nowrap}
+    .abstract{font-style:italic;color:var(--muted)}
+    .callout{padding:14px;border:1px dashed var(--rule);border-radius:12px;background:rgba(245,158,11,.08)}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    table{width:100%;border-collapse:collapse;margin:8px 0}
+    th,td{border:1px solid var(--rule);padding:8px;vertical-align:top}
+    th{background:var(--panel);text-align:left}
+    code{background:var(--code);padding:1px 4px;border-radius:4px}
+    @media print{body{background:#fff}nav,section{break-inside:avoid}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Genesis</div>
+      <h1>Genesis &tau; — Seeding Baby Universes and One-Shot Messages</h1>
+      <div class="subtitle">A &tau;-first exploration of cosmological engineering, causal limits, and universal beacons</div>
+      <div class="meta">Author: Tristan White • v1.0 • Updated: Mon, Sep 1, 2025, 11:11 PM EDT</div>
+      <nav aria-label="Contents">
+        <ul>
+          <li><a href="#abstract">Abstract</a></li>
+          <li><a href="#motivation">1. Motivation &amp; Scope</a></li>
+          <li><a href="#foundations">2. Foundations: Causality &amp; Baby Universes</a></li>
+          <li><a href="#principles">3. One-Shot Message Principles</a></li>
+          <li><a href="#channels">4. Universal Channels</a></li>
+          <li><a href="#benchmarks">5. Concrete Beacons &amp; Benchmarks</a></li>
+          <li><a href="#tau">6. &tau;-First Engineering Notes</a></li>
+          <li><a href="#detection">7. Detection Roadmap</a></li>
+          <li><a href="#falsifiers">8. Falsifiers &amp; Failure Modes</a></li>
+          <li><a href="#ethics">9. Ethical &amp; Design Considerations</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#appendix-a">Appendix A — Messaging Templates</a></li>
+          <li><a href="#appendix-b">Appendix B — Test Protocols (Checklist)</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="abstract"><h2>Abstract</h2>
+        <p class="abstract">If it were possible to seed a “baby universe,” any outgoing communication must be encoded at creation and persist cosmologically. We propose a &tau;-first, operational taxonomy of <em>one-shot</em> message channels that are universal, robust to inflation and late-time astrophysics, and decodable by any advanced observers. We list concrete, quantified “beacons” (uniform CMB polarization rotation, spectral features in the primordial gravitational-wave background, topology tags) with detection benchmarks and falsifiers, and outline a &tau;-budgeting approach to ensure signals remain benign for structure formation.</p>
+      </section>
+
+      <section id="motivation"><h2>1. Motivation &amp; Scope</h2>
+        <p>The seeding entity and the offspring cosmos are generically causally disconnected. Thus, “contact” reduces to leaving <em>global</em>, <em>dimensionless</em>, and <em>redundant</em> signatures that any civilization could recover with sky surveys or precision cosmology.</p>
+      </section>
+
+      <section id="foundations"><h2>2. Foundations: Causality &amp; Baby Universes</h2>
+        <p>Pinch-off geometries and black-hole interiors typically sever two-way links. We therefore focus on initial-condition encodings that propagate to late times with minimal degradation.</p>
+        <div class="equation">Design target: global, frame-independent, horizon-scale observables &rarr; universal accessibility</div>
+      </section>
+
+      <section id="principles"><h2>3. One-Shot Message Principles</h2>
+        <ul>
+          <li><strong>Universality:</strong> everyone sees it (CMB, primordial GWs, topology).</li>
+          <li><strong>Survivability:</strong> resistant to inflationary smoothing and late-time processing.</li>
+          <li><strong>Decodability:</strong> compressible into simple ratios/angles; low algorithmic complexity.</li>
+          <li><strong>Benign:</strong> does not spoil BBN, CMB, or structure formation.</li>
+          <li><strong>Redundancy:</strong> the same number appears via two independent mechanisms.</li>
+        </ul>
+      </section>
+
+      <section id="channels"><h2>4. Universal Channels</h2>
+        <h3>4.1 CMB polarization rotation (cosmic birefringence)</h3>
+        <p>Encode a frequency-independent angle &theta; that mixes E/B modes.</p>
+        <div class="equation">Signature: nonzero TB/EB with uniform sign &rarr; rotation angle &theta;</div>
+
+        <h3>4.2 Primordial gravitational-wave background (PGWB) beacons</h3>
+        <p>Generate two–three narrow peaks with special <em>ratios</em>, robust across detectors.</p>
+        <div class="equation">Signature: &Omega;<sub>GW</sub>(f) has peaks at f<sub>1</sub>, f<sub>2</sub>, ... with f<sub>2</sub>/f<sub>1</sub> = &phi; (golden ratio), etc.</div>
+
+        <h3>4.3 Spatial topology tag</h3>
+        <p>Choose a multiply connected fundamental domain with integer side-length ratios (e.g., 3:4:5) just inside the observable radius.</p>
+        <div class="equation">Signature: matched circles in the CMB + repeating LSS patterns</div>
+
+        <h3>4.4 Parity-odd imprints</h3>
+        <p>Chiral PGWB or scale-invariant TB/EB beyond uniform rotation.</p>
+
+        <h3>4.5 Mild isocurvature markers</h3>
+        <p>Small, coherent isocurvature fraction at two k-modes with a simple ratio.</p>
+      </section>
+
+      <section id="benchmarks"><h2>5. Concrete Beacons &amp; Benchmarks</h2>
+        <div class="callout"><strong>Design note:</strong> choose <em>dimensionless</em> encodings (angles, ratios) and keep amplitudes below conservative cosmological bounds.</div>
+
+        <h3>5.1 Uniform CMB rotation</h3>
+        <div class="equation">Target: &theta; = 0.0314159 rad (≈ 1.80&deg;) &rarr; recoverable from TB/EB</div>
+        <p>Redundancy: also encode &theta;/&pi; in a second channel (e.g., chiral PGWB sign).</p>
+
+        <h3>5.2 Two-peak PGWB “golden beacon”</h3>
+        <div class="equation">f<sub>2</sub>/f<sub>1</sub> = &phi; = (1 + &radic;5)/2 &approx; 1.61803</div>
+        <p>Keep peak amplitudes modest; prioritize <em>ratios</em> over absolutes.</p>
+
+        <h3>5.3 Topology ID</h3>
+        <div class="equation">Fundamental domain: side ratios 3:4:5; curvature tuned to produce matched circles at degree scales</div>
+
+        <h3>5.4 “Lockstep” checksum</h3>
+        <div class="equation">&delta;&lambda;<sub>C</sub>/&lambda;<sub>C</sub> = &delta;t<sub>C</sub>/t<sub>C</sub> = &minus;&delta;&omega;<sub>c</sub>/&omega;<sub>c</sub></div>
+        <p>Include a tiny, coherent modulation obeying this relation so multiple experiments confirm the same bit.</p>
+      </section>
+
+      <section id="tau"><h2>6. &tau;-First Engineering Notes</h2>
+        <p>Let &tau; &equiv; E/c<sup>3</sup> &equiv; m/c. Treat message generation as &tau;-budgeted excitations:</p>
+        <div class="equation">E<sub>msg</sub> &rarr; &tau;<sub>msg</sub> = E<sub>msg</sub>/c<sup>3</sup></div>
+        <p>Constraints: keep total &tau;<sub>msg</sub> small enough to avoid excess radiation or curvature while preserving detectability.</p>
+      </section>
+
+      <section id="detection"><h2>7. Detection Roadmap</h2>
+        <ul>
+          <li><strong>CMB:</strong> TB/EB estimators for uniform rotation; topology matched-circle searches.</li>
+          <li><strong>PGWB:</strong> cross-band spectral peak hunting (PTAs, space interferometers, ground-based).</li>
+          <li><strong>LSS:</strong> wiggle-finding in P(k); topology repeats.</li>
+          <li><strong>Redundancy:</strong> same number via two channels to suppress systematics.</li>
+        </ul>
+      </section>
+
+      <section id="falsifiers"><h2>8. Falsifiers &amp; Failure Modes</h2>
+        <ul>
+          <li>Null TB/EB consistent with calibration &rarr; rules out uniform rotation beacon.</li>
+          <li>No stable PGWB peak ratios across bands &rarr; rules out spectral encoding.</li>
+          <li>Matched-circle limits push topology scale beyond horizon &rarr; topology tag excluded.</li>
+          <li>Any signal that breaks BBN/CMB/structure limits &rarr; not a viable beacon.</li>
+        </ul>
+      </section>
+
+      <section id="ethics"><h2>9. Ethical &amp; Design Considerations</h2>
+        <ul>
+          <li><strong>Non-maleficence:</strong> do not degrade structure formation or habitability.</li>
+          <li><strong>Universality:</strong> avoid anthropic encodings; prefer mathematical constants and simple ratios.</li>
+          <li><strong>Verification:</strong> design for multi-probe confirmation within a few decades of detectors.</li>
+        </ul>
+      </section>
+
+      <section id="references"><h2>References</h2>
+        <ol>
+          <li>Foundational ideas on inflation, bubble universes, and topology searches.</li>
+          <li>Method papers on CMB polarization rotation and TB/EB estimators.</li>
+          <li>Reviews on stochastic gravitational-wave backgrounds across frequency bands.</li>
+          <li>Prior τ-first work: White, T. (2025). Unified Temporal–Energetic Geometry (&tau; framework).</li>
+        </ol>
+      </section>
+
+      <section id="appendix-a"><h2>Appendix A — Messaging Templates</h2>
+        <h3>A.1 Angle + Ratio (redundant encoding)</h3>
+        <div class="equation">&theta; = 0.0314159 rad; &nbsp; f<sub>2</sub>/f<sub>1</sub> = &phi;</div>
+        <p>Detect via CMB TB/EB and PGWB peak ratios. Publish both with uncertainties as a self-identifying pair.</p>
+
+        <h3>A.2 Topology + Wiggle</h3>
+        <div class="equation">Domain 3:4:5; &nbsp; P(k) has a small log-periodic oscillation with two incommensurate frequencies</div>
+
+        <h3>A.3 Parity + Checksum</h3>
+        <div class="equation">Chiral PGWB sign fixed; &nbsp; lockstep relation across Compton/cyclotron/clock channels</div>
+      </section>
+
+      <section id="appendix-b"><h2>Appendix B — Test Protocols (Checklist)</h2>
+        <table>
+          <tr><th>Channel</th><th>Observable</th><th>Procedure</th><th>Decision</th></tr>
+          <tr>
+            <td>CMB rotation</td>
+            <td>TB/EB &rarr; &theta;</td>
+            <td>Joint analysis of temperature + E/B; calibration null tests</td>
+            <td>Detect if &theta; &ne; 0 across instruments</td>
+          </tr>
+          <tr>
+            <td>PGWB peaks</td>
+            <td>&Omega;<sub>GW</sub>(f) peaks</td>
+            <td>Cross-band search; require stable ratios</td>
+            <td>Detect if f<sub>2</sub>/f<sub>1</sub> constant across bands</td>
+          </tr>
+          <tr>
+            <td>Topology</td>
+            <td>Matched circles</td>
+            <td>Full-sky CMB map; circle-matching algorithm</td>
+            <td>Detect if consistent pairs found above false-match rate</td>
+          </tr>
+          <tr>
+            <td>Parity/chirality</td>
+            <td>Sign-stable TB/EB, chiral PGWB</td>
+            <td>Multi-detector parity tests</td>
+            <td>Detect if odd correlations persist after systematics</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <footer>© <span id="y"></span> Tristan White • Creative Commons BY-NC-SA 4.0</footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
