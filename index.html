@@ -3,11 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Genesis &mdash; Seeding the Universe: Scenarios, Footprints, and Tests</title>
+  <title>Genesis — Seeding the Universe: Scenarios, Footprints, and Tests</title>
   <meta name="description" content="A v1.1 framework for cosmic seeding: decision tree (creator vs. natural vs. first), mathematical encoding options, observable footprints, falsifiable tests, and safety/governance if we are early." />
-  <script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
 
   <!-- Inline favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdjM2FlZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE2IiBmaWxsPSIjMGIwZjE5Ii8+PHRleHQgeD0iMTYiIHk9IjIxIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ1cmwoI2cpIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiPlQ8L3RleHQ+PC9zdmc+" />
@@ -151,7 +148,7 @@
         </table>
       </section>
 
-      <!-- NEW: MATH OPTIONS -->
+      <!-- MATH OPTIONS -->
       <section id="math"><h2>2. Mathematical Options &amp; Encoders</h2>
 
         <h3>2.1 Carriers (where to put bits)</h3>
@@ -207,12 +204,16 @@
         </ul>
 
         <h3>2.4 Capacity &amp; robustness (how many bits survive)</h3>
-        <div class="equation">C \approx \sum_{i} \log_{2}\!\left(1 + \frac{\tau_{\mathrm{enc},i}^{2}}{\sigma_{i}^{2}}\right) \quad \text{(orthogonal carriers i)}</div>
+        <div class="equation">
+          C &approx; &sum;<sub>i</sub> log<sub>2</sub>&#8289;( 1 + (&tau;<sub>enc,i</sub><sup>2</sup> / &sigma;<sub>i</sub><sup>2</sup>) ) &nbsp; &nbsp; <span style="opacity:.8">(orthogonal carriers i)</span>
+        </div>
         <p>Choose <em>&tau;<sub>enc,i</sub></em> (tolerated embedding amplitude) below detection thresholds that would break cosmology; model <em>&sigma;<sub>i</sub></em> (noise) per carrier. Use repetition and interleaving to trade rate for reliability (Shannon).</p>
 
         <h3>2.5 Selection formalism (if universes reproduce)</h3>
-        <div class="equation">F(&theta;) = \lambda_{\mathrm{BH}}(&theta;) \cdot H(&theta;) \quad ; \quad &theta;=\{&alpha;, m_e/m_p, Q, G, \ldots \}</div>
-        <p>Reproductive fitness <em>F</em> combines black-hole yield <em>&lambda;<sub>BH</sub></em> and habitability <em>H</em>. Ridge tests: is our observed <em>&theta;</em> near <em>&nabla;F &asymp; 0</em> with negative-definite Hessian?</p>
+        <div class="equation">
+          F(&theta;) = &lambda;<sub>BH</sub>(&theta;) &middot; H(&theta;) &nbsp; ; &nbsp; &theta; = { &alpha;, m<sub>e</sub>/m<sub>p</sub>, Q, G, &hellip; }
+        </div>
+        <p>Reproductive fitness <em>F</em> combines black-hole yield <em>&lambda;<sub>BH</sub></em> and habitability <em>H</em>. Ridge tests: is our observed <em>&theta;</em> near <em>&nabla;F &approx; 0</em> with a negative-definite Hessian?</p>
 
         <h3>2.6 Decoder pipelines (how a descendant would read)</h3>
         <ol>
@@ -272,7 +273,9 @@
           <li><strong>Orthogonality:</strong> place the same payload in multiple independent carriers (constants, topology, spectrum).</li>
         </ul>
         <h3>4.2 Example payload (toy)</h3>
-        <div class="equation">M = \{ \text{prime length } p,\ \text{Barker-like autocorrelation},\ \text{checksum} \}</div>
+        <div class="equation">
+          M = &lbrace; prime length <i>p</i>, Barker-like autocorrelation, checksum &rbrace;
+        </div>
         <p>Embed <em>M</em> as: (a) low-&ell; CMB phase pattern, (b) slight biases in a set of dimensionless ratios within error tolerance, (c) preferred compact topology signature.</p>
       </section>
 
@@ -341,19 +344,27 @@
 
       <section id="appendix-b"><h2>Appendix B &mdash; Bits in Constants (Feasibility)</h2>
         <p>Let <em>x</em> be a dimensionless constant with measured value <em>&#x005E;x</em> and uncertainty &sigma;. The per-constant channel capacity (bits) under Gaussian noise with tolerance &tau;<sub>enc</sub> is approximately:</p>
-        <div class="equation">C<sub>x</sub> \approx \log_{2}\!\left( 1 + \frac{\tau_{\text{enc}}^{2}}{\sigma^{2}} \right)</div>
+        <div class="equation">
+          C<sub>x</sub> &approx; log<sub>2</sub>&#8289;( 1 + (&tau;<sub>enc</sub><sup>2</sup> / &sigma;<sup>2</sup>) )
+        </div>
         <p>Aggregate across near-orthogonal constants; penalize for correlations and long-term drifts. If <em>&Sigma; C<sub>x</sub></em> &ll; 1, constants are a poor carrier.</p>
       </section>
 
       <section id="appendix-c"><h2>Appendix C &mdash; Black-Hole Yield Sensitivity Map</h2>
-        <p>Define a minimal parameter vector <span class="equation" style="display:inline-block">&theta; = \{&alpha;, m_e/m_p, Q, G \}</span>, then:</p>
-        <div class="equation">Y_{\mathrm{BH}}(&theta;) = \int \mathrm{IMF}(&theta;)\ \times\ P_{\mathrm{BH}\,|\,M,&theta;}\ \times\ \mathrm{SFR}(&theta;)\ dM\ dt</div>
+        <p>Define a minimal parameter vector <span class="equation" style="display:inline-block">&theta; = { &alpha;, m<sub>e</sub>/m<sub>p</sub>, Q, G }</span>, then:</p>
+        <div class="equation">
+          Y<sub>BH</sub>(&theta;) = &int; IMF(&theta;) &times; P<sub>BH|M,&theta;</sub> &times; SFR(&theta;) &nbsp; dM &nbsp; dt
+        </div>
         <p>Publish contour plots of Y<sub>BH</sub>(&theta;). Ridges support selection-style reproduction stories; flatlands don&rsquo;t.</p>
       </section>
 
       <section id="appendix-d"><h2>Appendix D &mdash; Mathematical Definitions &amp; Identities</h2>
         <ul>
-          <li><strong>Spherical harmonics:</strong> coefficients a<sub>&ell;m</sub> with <span class="equation" style="display:inline-block">C<sub>&ell;</sub> = \frac{1}{2&ell;+1}\sum_{m} \lvert a_{&ell;m} \rvert^{2}</span>.</li>
+          <li><strong>Spherical harmonics:</strong> coefficients a<sub>&ell;m</sub> with
+            <span class="equation" style="display:inline-block">
+              C<sub>&ell;</sub> = 1/(2&ell;+1) &nbsp; &sum;<sub>m</sub> &vert;a<sub>&ell;m</sub>&vert;<sup>2</sup>
+            </span>
+          </li>
           <li><strong>Matched circles (topology):</strong> statistic <em>S</em> maximizing phase correlations along paired great-circle arcs.</li>
           <li><strong>Compression/MDL:</strong> &Delta;DL = DL(model) &minus; DL(null); positive &Delta;DL favors the model if penalties are included.</li>
           <li><strong>Algorithmic proxies:</strong> Lempel&ndash;Ziv complexity <em>K<sub>LZ</sub></em> as an upper-bound proxy for Kolmogorov complexity.</li>
