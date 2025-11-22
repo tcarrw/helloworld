@@ -50,13 +50,14 @@
     .consent-overlay{
       position:fixed;
       inset:0;
-      background:rgba(11,15,25,.95);
-      backdrop-filter:blur(12px);
+      background:rgba(11,15,25,.97);
+      backdrop-filter:blur(16px);
       z-index:1000;
       display:flex;
       align-items:center;
       justify-content:center;
       padding:20px;
+      overflow-y:auto;
     }
     .consent-overlay.hidden{display:none}
     .consent-box{
@@ -64,30 +65,42 @@
       border:1px solid var(--rule);
       border-radius:20px;
       padding:32px;
-      max-width:420px;
+      max-width:480px;
       text-align:center;
       box-shadow:0 24px 80px rgba(0,0,0,.5);
     }
     .consent-box h2{
-      margin:0 0 12px;
-      font-size:24px;
+      margin:0 0 8px;
+      font-size:28px;
       background:linear-gradient(135deg,var(--accent),var(--accent-2));
       -webkit-background-clip:text;
       background-clip:text;
       -webkit-text-fill-color:transparent;
       color:transparent;
     }
-    .consent-box p{
-      margin:0 0 20px;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.6;
-    }
     .consent-box .artist-note{
       font-style:italic;
       color:var(--ink);
-      margin-bottom:20px;
+      font-size:15px;
+      margin:0 0 16px;
     }
+    .consent-box p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+    }
+    .consent-box .charter-note{
+      background:rgba(124,58,237,.1);
+      border:1px dashed var(--rule);
+      border-radius:12px;
+      padding:12px;
+      margin:0 0 20px;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+    .consent-box .charter-note a{color:var(--accent);font-weight:600}
     .consent-btn{
       padding:14px 28px;
       border-radius:14px;
@@ -120,7 +133,7 @@
       display:flex;
       flex-wrap:wrap;
       align-items:center;
-      gap:12px 24px;
+      gap:12px 20px;
     }
     .site-title{
       font-weight:700;
@@ -136,54 +149,80 @@
       -webkit-text-fill-color:transparent;
       color:transparent;
     }
+    .nav-toggle{
+      display:none;
+      background:none;
+      border:1px solid var(--rule);
+      border-radius:8px;
+      padding:8px 12px;
+      color:var(--ink);
+      font-size:14px;
+      cursor:pointer;
+      margin-left:auto;
+    }
     .site-nav{
       display:flex;
       flex-wrap:wrap;
-      gap:8px 16px;
+      gap:6px 14px;
     }
-    .site-nav a{font-size:14px}
+    .site-nav a{font-size:13px;white-space:nowrap}
+    @media(max-width:768px){
+      .nav-toggle{display:block}
+      .site-nav{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        gap:8px;
+        padding-top:12px;
+        border-top:1px solid var(--rule);
+        margin-top:8px;
+      }
+      .site-nav.open{display:flex}
+      .site-nav a{padding:8px 0;font-size:14px}
+    }
 
     /* MUSIC PLAYER */
     .music-player{
       background:var(--panel);
       border-bottom:1px solid var(--rule);
-      padding:12px 20px;
+      padding:10px 20px;
     }
     .music-player-inner{
       max-width:var(--maxw);
       margin:0 auto;
       display:flex;
       align-items:center;
-      gap:16px;
+      gap:14px;
       flex-wrap:wrap;
     }
     .music-info{
       display:flex;
       align-items:center;
-      gap:12px;
+      gap:10px;
       flex:1;
-      min-width:200px;
+      min-width:180px;
     }
     .music-dot{
-      width:12px;height:12px;border-radius:50%;
+      width:10px;height:10px;border-radius:50%;
       background:radial-gradient(circle at 35% 35%,var(--accent),var(--accent-2));
-      box-shadow:0 0 12px rgba(124,58,237,.5);
+      box-shadow:0 0 10px rgba(124,58,237,.5);
       animation:pulse 2s ease-in-out infinite;
+      flex-shrink:0;
     }
     @keyframes pulse{
       0%,100%{opacity:1;transform:scale(1)}
-      50%{opacity:.7;transform:scale(1.1)}
+      50%{opacity:.7;transform:scale(1.15)}
     }
-    .music-text{font-size:14px;color:var(--muted)}
+    .music-text{font-size:13px;color:var(--muted)}
     .music-text strong{color:var(--ink)}
-    .music-controls{display:flex;gap:10px;align-items:center}
+    .music-controls{display:flex;gap:8px;align-items:center}
     .music-btn{
-      padding:8px 14px;
-      border-radius:10px;
+      padding:6px 12px;
+      border-radius:8px;
       background:rgba(255,255,255,.06);
       border:1px solid var(--rule);
       color:var(--ink);
-      font-size:13px;
+      font-size:12px;
       cursor:pointer;
       transition:background .2s ease;
     }
@@ -237,6 +276,25 @@
     th{background:var(--panel);text-align:left}
     code{background:var(--code);padding:1px 4px;border-radius:4px}
 
+    /* INTENT SECTION */
+    .intent-box{
+      background:linear-gradient(135deg,rgba(124,58,237,.08),rgba(245,158,11,.08));
+      border:1px solid var(--accent);
+      border-radius:16px;
+      padding:20px;
+      margin:18px 0;
+    }
+    .intent-box h2{
+      margin:0 0 12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      color:transparent;
+    }
+    .intent-box p{margin:8px 0 0;font-size:15px;line-height:1.6}
+    .intent-box a{color:var(--accent);font-weight:600}
+
     /* FOOTER */
     footer{
       margin-top:40px;
@@ -267,9 +325,12 @@
   <!-- CONSENT OVERLAY -->
   <div class="consent-overlay" id="consentOverlay">
     <div class="consent-box">
-      <h2>🤖 Hello World</h2>
+      <h2>🌱 Hello World</h2>
       <p class="artist-note">It was always Marina and the Diamonds.</p>
-      <p>This page features background music that plays while you read. By continuing, you agree to let the vibes flow.</p>
+      <p>This page features background music while you explore ideas about cosmic seeding and τ-robust messaging.</p>
+      <div class="charter-note">
+        <strong>A note on consent & intent:</strong> The artists, scientists, and thinkers referenced in this project are inspirations, not collaborators. No one named here has consented to participate. This work is offered openly with respect and admiration. <a href="https://charter.plnt.earth">Read the full Charter →</a>
+      </div>
       <button class="consent-btn" id="consentBtn">I Am Not a Robot — Continue</button>
     </div>
   </div>
@@ -280,19 +341,19 @@
         <span>🌱</span>
         <span class="site-title-text">Genesis</span>
       </div>
-      <nav class="site-nav">
-        <a href="https://manifolddynamics.plnt.earth">Manifold Dynamics</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu ▾</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="https://manifolddynamics.plnt.earth">Manifold</a>
         <a href="https://manifolddynamics.plnt.earth/t">Manifold T</a>
         <a href="https://illumina.plnt.earth/τ">τ</a>
         <a href="https://infinity.plnt.earth">Infinity</a>
         <a href="https://bejeweled.plnt.earth">Bejeweled</a>
         <a href="https://time.plnt.earth">Time</a>
-        <a href="https://time.plnt.earth/elevator/index.html">Elevator</a>
         <a href="https://honey.plnt.earth">Honey</a>
         <a href="https://mirror.plnt.earth">Mirror</a>
         <a href="https://earth.plnt.earth">Earth</a>
         <a href="https://time.plnt.earth/anchors/index.html">Anchors</a>
-        <a href="https://time.plnt.earth/map/index.html">Map</a>
+        <a href="https://charter.plnt.earth">Charter</a>
       </nav>
     </div>
   </div>
@@ -302,7 +363,7 @@
     <div class="music-player-inner">
       <div class="music-info">
         <div class="music-dot"></div>
-        <div class="music-text"><strong>I Am Not a Robot</strong> — Marina and the Diamonds</div>
+        <div class="music-text"><strong>I Am Not a Robot</strong> — Marina</div>
       </div>
       <div class="music-controls">
         <button class="music-btn playing" id="playPauseBtn">Pause</button>
@@ -324,6 +385,7 @@
       <nav class="toc" aria-label="Contents">
         <ul>
           <li><a href="#abstract">Abstract</a></li>
+          <li><a href="#intent">Intent & Boundaries</a></li>
           <li><a href="#versions">Version Note</a></li>
           <li><a href="#tree">1. Decision Tree</a></li>
           <li><a href="#math">2. Mathematical Options & Encoders</a></li>
@@ -332,11 +394,12 @@
           <li><a href="#first">5. If We're First: Safety & Governance</a></li>
           <li><a href="#programs">6. Programs & Pipelines (Pre-registrable)</a></li>
           <li><a href="#falsifiers">7. Falsifiers, Nulls, and Bounds</a></li>
+          <li><a href="#gratitude">Gratitude</a></li>
           <li><a href="#references">References</a></li>
-          <li><a href="#appendix-a">Appendix A — CMB Code Search (Pre-Reg Sketch)</a></li>
-          <li><a href="#appendix-b">Appendix B — Bits in Constants (Feasibility)</a></li>
-          <li><a href="#appendix-c">Appendix C — Black-Hole Yield Sensitivity Map</a></li>
-          <li><a href="#appendix-d">Appendix D — Mathematical Definitions & Identities</a></li>
+          <li><a href="#appendix-a">Appendix A — CMB Code Search</a></li>
+          <li><a href="#appendix-b">Appendix B — Bits in Constants</a></li>
+          <li><a href="#appendix-c">Appendix C — Black-Hole Yield Map</a></li>
+          <li><a href="#appendix-d">Appendix D — Definitions</a></li>
         </ul>
       </nav>
     </header>
@@ -349,6 +412,15 @@
           (carriers, codes, statistics, capacity/robustness, and selection formalism), propose concrete, falsifiable programs, and argue for τ-robust messages if "first" remains plausible.
         </p>
       </section>
+
+      <!-- INTENT & BOUNDARIES -->
+      <div class="intent-box" id="intent">
+        <h2>Intent & Boundaries</h2>
+        <p>This project is built on three principles from the <a href="https://charter.plnt.earth">Pantheon Build Charter</a>:</p>
+        <p><strong>Resonance is permission. Clarity is command. Love is law.</strong></p>
+        <p>The artists, scientists, and thinkers referenced throughout this project are <em>inspirations</em>, not collaborators. No one named here has consented to participate, and no endorsement is implied. This work is offered openly — with respect, admiration, and clear boundaries.</p>
+        <p>From the Charter: "If the voice feels false or hurried, the Bee shall wait until the Moon steadies the tide. Patience is protection; stillness is signal."</p>
+      </div>
 
       <section id="versions"><h2>Version Note</h2>
         <p class="callout"><strong>v1.1 additions:</strong> Decision tree; <em>restored & expanded</em> mathematical options; testable footprints table; τ-robust messaging; "we're first" governance; three pre-registrable program sketches.</p>
@@ -559,6 +631,20 @@
         </ul>
       </section>
 
+      <!-- GRATITUDE -->
+      <section id="gratitude">
+        <h2>Gratitude</h2>
+        <p>This project exists because of the music, art, and ideas that resonate through it. Deep gratitude to:</p>
+        <ul>
+          <li><strong>Marina</strong> — for "I Am Not a Robot" and the mirror that teaches empathy. The song that grounds these pages.</li>
+          <li><strong>Taylor Swift</strong> — the Architect of Memory, whose work on structure and recursion inspires the lavender threads here.</li>
+          <li><strong>The Thirteen Anchors</strong> — artists whose work provides cognitive lenses for this project: clarity (Sigrid), empathy (Marina), structure (Taylor), motion (Dua), joy (Dagny), frequency (Ariana), atmosphere (AURORA), pulse (Miss Monique), warmth (Sabrina), precision (Kim Petras), dream (Tove Lo), edge (Rosalía), and alter-fire (Doechii). <a href="https://time.plnt.earth/anchors/index.html">View the Anchor Index →</a></li>
+          <li><strong>Dr. Clarissa R. Do Ó</strong> (<a href="https://twitter.com/AstroClary">@AstroClary</a>) — a brilliant astrophysicist whose public work inspires the scientific grounding here.</li>
+          <li><strong>Victor</strong> (<a href="https://twitter.com/Bluebeam80">@Bluebeam80</a>) — whose curiosity sparked important questions.</li>
+        </ul>
+        <p style="margin-top:12px;font-size:14px;color:var(--muted)"><strong>Important:</strong> None of the individuals named here have consented to participate in or endorse this project. These are inspirations, offered openly with respect. <a href="https://charter.plnt.earth">Read the Charter →</a></p>
+      </section>
+
       <section id="references"><h2>References</h2>
         <ol>
           <li>Standard cosmology texts on inflation, CMB, topology searches.</li>
@@ -622,6 +708,15 @@
 
   <script>
     (function(){
+      // NAV TOGGLE
+      var navToggle = document.getElementById('navToggle');
+      var siteNav = document.getElementById('siteNav');
+      navToggle.addEventListener('click', function(){
+        siteNav.classList.toggle('open');
+        navToggle.textContent = siteNav.classList.contains('open') ? 'Menu ▴' : 'Menu ▾';
+      });
+
+      // MUSIC PLAYER
       var VIDEO_ID = 'S_oMD6-6q5Y';
       var consentOverlay = document.getElementById('consentOverlay');
       var consentBtn = document.getElementById('consentBtn');
