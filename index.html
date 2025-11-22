@@ -46,11 +46,11 @@
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
 
-    /* CONSENT OVERLAY */
+    /* CONSENT OVERLAY - always visible by default */
     .consent-overlay{
       position:fixed;
       inset:0;
-      background:rgba(11,15,25,.97);
+      background:rgba(11,15,25,.98);
       backdrop-filter:blur(16px);
       z-index:1000;
       display:flex;
@@ -59,7 +59,9 @@
       padding:20px;
       overflow-y:auto;
     }
-    .consent-overlay.hidden{display:none}
+    .consent-overlay[aria-hidden="true"]{
+      display:none;
+    }
     .consent-box{
       background:var(--panel);
       border:1px solid var(--rule);
@@ -99,6 +101,7 @@
       font-size:13px;
       color:var(--muted);
       line-height:1.5;
+      text-align:left;
     }
     .consent-box .charter-note a{color:var(--accent);font-weight:600}
     .consent-btn{
@@ -111,6 +114,8 @@
       border:none;
       cursor:pointer;
       transition:transform .15s ease, box-shadow .15s ease;
+      width:100%;
+      max-width:300px;
     }
     .consent-btn:hover{
       transform:translateY(-2px);
@@ -204,10 +209,14 @@
     }
     .music-dot{
       width:10px;height:10px;border-radius:50%;
+      background:var(--rule);
+      flex-shrink:0;
+      transition:background .3s ease, box-shadow .3s ease;
+    }
+    .music-dot.active{
       background:radial-gradient(circle at 35% 35%,var(--accent),var(--accent-2));
       box-shadow:0 0 10px rgba(124,58,237,.5);
       animation:pulse 2s ease-in-out infinite;
-      flex-shrink:0;
     }
     @keyframes pulse{
       0%,100%{opacity:1;transform:scale(1)}
@@ -230,6 +239,7 @@
     .music-btn.playing{
       background:linear-gradient(135deg,var(--accent),var(--accent-2));
       border-color:transparent;
+      color:#fff;
     }
     #youtube-player{
       position:fixed;
@@ -322,16 +332,16 @@
   </style>
 </head>
 <body>
-  <!-- CONSENT OVERLAY -->
-  <div class="consent-overlay" id="consentOverlay">
+  <!-- CONSENT OVERLAY - visible by default, hidden via JS on consent -->
+  <div class="consent-overlay" id="consentOverlay" aria-hidden="false">
     <div class="consent-box">
       <h2>🌱 Hello World</h2>
       <p class="artist-note">It was always Marina and the Diamonds.</p>
-      <p>This page features background music while you explore ideas about cosmic seeding and τ-robust messaging.</p>
+      <p>This page explores ideas about cosmic seeding and τ-robust messaging. Background music is available after you enter.</p>
       <div class="charter-note">
         <strong>A note on consent & intent:</strong> The artists, scientists, and thinkers referenced in this project are inspirations, not collaborators. No one named here has consented to participate. This work is offered openly with respect and admiration. <a href="https://charter.plnt.earth">Read the full Charter →</a>
       </div>
-      <button class="consent-btn" id="consentBtn">I Am Not a Robot — Continue</button>
+      <button class="consent-btn" id="consentBtn" type="button">I Am Not a Robot — Enter</button>
     </div>
   </div>
 
@@ -341,7 +351,7 @@
         <span>🌱</span>
         <span class="site-title-text">Genesis</span>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">Menu ▾</button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">Menu ▾</button>
       <nav class="site-nav" id="siteNav">
         <a href="https://manifolddynamics.plnt.earth">Manifold</a>
         <a href="https://manifolddynamics.plnt.earth/t">Manifold T</a>
@@ -358,21 +368,21 @@
     </div>
   </div>
 
-  <!-- MUSIC PLAYER BAR -->
+  <!-- MUSIC PLAYER BAR - always visible, but play requires tap -->
   <div class="music-player" id="musicPlayer">
     <div class="music-player-inner">
       <div class="music-info">
-        <div class="music-dot"></div>
+        <div class="music-dot" id="musicDot"></div>
         <div class="music-text"><strong>I Am Not a Robot</strong> — Marina</div>
       </div>
       <div class="music-controls">
-        <button class="music-btn playing" id="playPauseBtn">Pause</button>
+        <button class="music-btn" id="playBtn" type="button">▶ Play</button>
         <a class="music-btn" href="https://www.youtube.com/watch?v=S_oMD6-6q5Y" target="_blank" rel="noopener">YouTube</a>
       </div>
     </div>
   </div>
 
-  <!-- Hidden YouTube iframe -->
+  <!-- Hidden YouTube iframe container -->
   <div id="youtube-player"></div>
 
   <div class="wrap">
@@ -454,7 +464,6 @@
         </div>
       </section>
 
-      <!-- MATH OPTIONS -->
       <section id="math"><h2>2. Mathematical Options & Encoders</h2>
 
         <h3>2.1 Carriers (where to put bits)</h3>
@@ -708,28 +717,32 @@
 
   <script>
     (function(){
-      // NAV TOGGLE
+      // ELEMENTS
+      var consentOverlay = document.getElementById('consentOverlay');
+      var consentBtn = document.getElementById('consentBtn');
       var navToggle = document.getElementById('navToggle');
       var siteNav = document.getElementById('siteNav');
+      var playBtn = document.getElementById('playBtn');
+      var musicDot = document.getElementById('musicDot');
+      var playerHost = document.getElementById('youtube-player');
+      
+      var VIDEO_ID = 'S_oMD6-6q5Y';
+      var iframe = null;
+      var isPlaying = false;
+
+      // NAV TOGGLE
       navToggle.addEventListener('click', function(){
         siteNav.classList.toggle('open');
         navToggle.textContent = siteNav.classList.contains('open') ? 'Menu ▴' : 'Menu ▾';
       });
 
-      // MUSIC PLAYER
-      var VIDEO_ID = 'S_oMD6-6q5Y';
-      var consentOverlay = document.getElementById('consentOverlay');
-      var consentBtn = document.getElementById('consentBtn');
-      var playerHost = document.getElementById('youtube-player');
-      var playPauseBtn = document.getElementById('playPauseBtn');
-      var musicPlayer = document.getElementById('musicPlayer');
-      var iframe = null;
-      var isPlaying = false;
+      // CONSENT - tap to enter (does NOT auto-play music)
+      consentBtn.addEventListener('click', function(){
+        consentOverlay.setAttribute('aria-hidden', 'true');
+      });
 
-      // Hide music player until consent
-      musicPlayer.style.display = 'none';
-
-      function buildSrc() {
+      // BUILD YOUTUBE SRC
+      function buildSrc(){
         var params = new URLSearchParams({
           autoplay: '1',
           loop: '1',
@@ -741,7 +754,9 @@
         return 'https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?' + params.toString();
       }
 
-      function injectPlayer() {
+      // INJECT PLAYER
+      function injectPlayer(){
+        if (iframe) return; // already injected
         iframe = document.createElement('iframe');
         iframe.title = 'Background music';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
@@ -749,25 +764,29 @@
         iframe.id = 'yt-iframe';
         playerHost.appendChild(iframe);
         isPlaying = true;
-        musicPlayer.style.display = 'block';
+        musicDot.classList.add('active');
+        playBtn.textContent = '❚❚ Pause';
+        playBtn.classList.add('playing');
       }
 
-      consentBtn.addEventListener('click', function() {
-        consentOverlay.classList.add('hidden');
-        injectPlayer();
-      });
-
-      playPauseBtn.addEventListener('click', function() {
-        if (!iframe) return;
-        if (isPlaying) {
+      // PLAY BUTTON - tap to play/pause
+      playBtn.addEventListener('click', function(){
+        if (!iframe) {
+          // First tap: inject and play
+          injectPlayer();
+        } else if (isPlaying) {
+          // Pause
           iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-          playPauseBtn.textContent = 'Play';
-          playPauseBtn.classList.remove('playing');
+          playBtn.textContent = '▶ Play';
+          playBtn.classList.remove('playing');
+          musicDot.classList.remove('active');
           isPlaying = false;
         } else {
+          // Resume
           iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-          playPauseBtn.textContent = 'Pause';
-          playPauseBtn.classList.add('playing');
+          playBtn.textContent = '❚❚ Pause';
+          playBtn.classList.add('playing');
+          musicDot.classList.add('active');
           isPlaying = true;
         }
       });
